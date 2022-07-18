@@ -18,7 +18,7 @@ if((isset($_POST['projet']) && $_POST['projet']!='')
 		$taux = $conn->quote($_POST['taux']);
 	}
 
-$query="insert into informatique VALUES (NULL, $projet, $finalite, $cout, $budget , $date , $taux)";
+$query="insert into finance VALUES (NULL, $projet, $finalite, $cout, $budget , $date , $taux)";
 $result=$conn->exec($query);
 
 if ($result!=1) {
@@ -26,7 +26,7 @@ if ($result!=1) {
 }
 
 else {
-	header("location:informatique_view.php");
+	header("location:finance_view.php");
 }
 
 //$dec = mysqli_close($conn);

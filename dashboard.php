@@ -1,9 +1,16 @@
 <?php
 $conn=mysqli_connect('localhost','root',"",'tableaudebord');
+
+
+
 $query = "SELECT id_info FROM informatique ORDER BY id_info";
 $query_run = mysqli_query($conn, $query);
 $row = mysqli_num_rows($query_run);
 
+
+$query2 = "SELECT id_fin FROM finance ORDER BY id_fin";
+$query_run2 = mysqli_query($conn, $query2);
+$row2 = mysqli_num_rows($query_run2);
 
 ?>
    <!DOCTYPE html>
@@ -33,7 +40,7 @@ $row = mysqli_num_rows($query_run);
          </label>
          <ul>
             <li><a href="informatique_view.php">Informatique</a></li>
-            <li><a href="#">Finance</a></li>
+            <li><a href="finance_view.php">Finance</a></li>
             <li><a href="#">Ressources Humaine</a></li>
             <li><a href="#">Maintenance</a></li>
             <li><a href="#">Projets</a></li>
@@ -60,11 +67,11 @@ $row = mysqli_num_rows($query_run);
 <div class="h-50 card text-white bg-secondary mb-3" style="max-width: 18rem;">
   <div class="card-header"><h2>Finance</h2></div>
   <div class="card-body">
-  <i class="fas fa-balance-scale"></i> Total:12
+  <i class="fas fa-balance-scale"></i> Total: <?php  echo '<h2>'.$row2.'</h2>'?>
     <hr>
     <div class="panel-footer">
-      <h6><a style="text-decoration:none;color:white" href="">
-                        <span class="pull-left">View Details</span>
+      <h6><a style="text-decoration:none;color:white" href="finance_view.php">
+                        <span class="pull-left">Voire plus de détail</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div></h6></a>

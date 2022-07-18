@@ -30,7 +30,7 @@ font-size: 1.2em;
 <?php
 $idcon=mysqli_connect("localhost" ,"root","","tableaudebord");
 
-$requet="select * from informatique";
+$requet="select * from finance";
 $res=mysqli_query($idcon, $requet);
 
 ?>
@@ -43,8 +43,8 @@ $res=mysqli_query($idcon, $requet);
    
       <a  href="dashboard.php"><button class="btn btn-primary btn-xs" ><i class="fas fa-arrow-left"></i>Retourner au Dashboard</button></a> 
 	  <br><br><br><br>
-	  <form method="post" action="export_info.php">
-<a  name="export" href="export_info.php"><button name="export" class="btn btn-success btn-xs" ><i class="fas fa-download"></i>Exporter CSV</button></a>
+	  <form method="post" action="export_finance.php">
+<a  name="export" href="export_finance.php"><button name="export" class="btn btn-success btn-xs" ><i class="fas fa-download"></i>Exporter CSV</button></a>
 </form>	
 <div class="panel-heading">
 		<div class="row">
@@ -52,7 +52,7 @@ $res=mysqli_query($idcon, $requet);
 				<h3 class="panel-title"></h3>
 			</div>
 			<div class="col-md-2" align="right">
-				<a href="add_informatique.php"><button type="button" name="add"  class="btn btn-success btn-xs">Ajouter</button></a>
+				<a href="add_finance.php"><button type="button" name="add"  class="btn btn-success btn-xs">Ajouter</button></a>
             </div>
 
 		</div>
@@ -65,7 +65,7 @@ $res=mysqli_query($idcon, $requet);
 
 	<table id="userList" class="table table-bordered table-striped ">
 		<thead>
-            <tr><td colspan="9" style="background:#047CFC"><span style="color:white">données des projets d'informatique</tr>
+            <tr><td colspan="9" style="background:GREY"><span style="color:white">données des projets de finance</tr>
 			<tr>
 				<th>ID</th>
 				<th>Projet</th>
@@ -100,9 +100,9 @@ while ($ligne=mysqli_fetch_array($res))
 
 <form method="POST" action="">
 <td>
-	<?php echo "<a id='delete_id' name='delete' class='btn btn-danger' href='delete_info.php?id=".$ligne['id_info']."'> Supprimer</a> ";?>
+	<?php echo "<a id='delete_id' name='delete' class='btn btn-danger' href='delete_finance.php?id=".$ligne['id_fin']."'> Supprimer</a> ";?>
 </td>
-<td><?php echo "<a id='edit_id' name='edit' class='btn btn-primary' href='edit_info.php?id=".$ligne['id_info']."'> Modifier</a> ";?></td>
+<td><?php echo "<a id='edit_id' name='edit' class='btn btn-primary' href='edit_finance.php?id=".$ligne['id_fin']."'> Modifier</a> ";?></td>
 </form>
 </tr>
 

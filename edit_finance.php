@@ -3,7 +3,7 @@ $conn=mysqli_connect("localhost" ,"root", "","tableaudebord");
 
 $id=$_GET['id'];
 
-$query="select * from informatique where id_info=$id";
+$query="select * from finance where id_fin=$id";
 
 $res=mysqli_query($conn, $query);
 
@@ -33,7 +33,7 @@ $row=mysqli_fetch_array($res);
 </head>
 
 <body>
-<a class="btn btn-primary" href="informatique_view.php">page précédente</a>
+<a class="btn btn-primary" href="finance_view.php">page précédente</a>
     <div class="container mt-5">
         <div class="card">
             <h5 class="card-header text-center"><i class="fas fa-edit"></i>Modifier projet</h5>
@@ -118,11 +118,11 @@ if(isset($_POST['confirmer'])){
     $date= $conn->quote($_POST['date']);
     $taux = $conn->quote($_POST['taux']);
 
-    $sql="update informatique set projet=$projet, finalite_projet=$finalite, cout=$cout, budget=$budget, created_at=$date, Taux_eval=$taux where id_info=$id";
+    $sql="update finance set projet=$projet, finalite_projet=$finalite, cout=$cout, budget=$budget, created_at=$date, Taux_eval=$taux where id_fin=$id";
 $result=$conn->exec($sql);
 
 if($result){
-    header("location:informatique_view.php");
+    header("location:finance_view.php");
 }
     else{
         echo"<script>alert('error')</script>";

@@ -5,12 +5,12 @@ if(isset($_GET['id'])){
 
  
 $id=$_GET['id'];
-$del="DELETE FROM informatique WHERE id_info='$id'";
+$del="DELETE FROM finance WHERE id_fin='$id'";
 
 $result=mysqli_query($idcon,$del);
 
 if($result){
-header("location:informatique_view.php");    
+header("location:finance_view.php");    
 }else{
 echo "<script>alert('erreur de suppression');</script>"; 
 
