@@ -12,6 +12,10 @@ $query2 = "SELECT id_fin FROM finance ORDER BY id_fin";
 $query_run2 = mysqli_query($conn, $query2);
 $row2 = mysqli_num_rows($query_run2);
 
+
+$query3 = "SELECT id_rh FROM rh ORDER BY id_rh";
+$query_run3 = mysqli_query($conn, $query3);
+$row3 = mysqli_num_rows($query_run3);
 ?>
    <!DOCTYPE html>
 
@@ -41,7 +45,7 @@ $row2 = mysqli_num_rows($query_run2);
          <ul>
             <li><a href="informatique_view.php">Informatique</a></li>
             <li><a href="finance_view.php">Finance</a></li>
-            <li><a href="#">Ressources Humaine</a></li>
+            <li><a href="RH_view.php">Ressources Humaine</a></li>
             <li><a href="#">Maintenance</a></li>
             <li><a href="#">Projets</a></li>
             <li><a href="logout.php">Déconnecter</a></li>
@@ -58,7 +62,7 @@ $row2 = mysqli_num_rows($query_run2);
     <hr>
     <div class="panel-footer">
       <h6><a style="text-decoration:none;color:white" href="informatique_view.php">
-                        <span class="pull-left">Voire plus de détail</span>
+                        <span class="pull-left">Voire détail</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div></h6></a>
@@ -71,7 +75,7 @@ $row2 = mysqli_num_rows($query_run2);
     <hr>
     <div class="panel-footer">
       <h6><a style="text-decoration:none;color:white" href="finance_view.php">
-                        <span class="pull-left">Voire plus de détail</span>
+                        <span class="pull-left">Voire détail</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div></h6></a>
@@ -80,11 +84,11 @@ $row2 = mysqli_num_rows($query_run2);
 <div class="h-50 card text-white bg-success mb-3" style="max-width: 18rem;">
   <div class="card-header"><h2>RH</h2></div>
   <div class="card-body">
-  <i class="fas fa-male"></i> Total:12
+  <i class="fas fa-male"></i> Total:<?php  echo '<h2>'.$row3.'</h2>'?>
     <hr>
     <div class="panel-footer">
-      <h6><a style="text-decoration:none;color:white" href="">
-                        <span class="pull-left">View Details</span>
+      <h6><a style="text-decoration:none;color:white" href="RH_view.php">
+                        <span class="pull-left">voire Détails</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div></h6></a>
@@ -97,7 +101,7 @@ $row2 = mysqli_num_rows($query_run2);
     <hr>
     <div class="panel-footer">
       <h6><a style="text-decoration:none;color:white" href="">
-                        <span class="pull-left">View Details</span>
+                        <span class="pull-left">voire Détails</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div></h6></a>

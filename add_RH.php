@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title> Ajout projet finance</title>
+    <title> Ajout projet RH</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -20,13 +20,13 @@
 </head>
 
 <body>
-    <a class="btn btn-primary" href="finance_view.php">page précédente</a>
+    <a class="btn btn-primary" href="RH_view.php">page précédente</a>
     
     <div class="container mt-5">
         <div class="card">
             <h5 class="card-header text-center"><i class="fas fa-plus-circle"></i>Ajouter projet</h5>
             <div class="card-body">
-                <form method="POST" action="finance_action.php" >
+                <form method="POST" action="RH_action.php" >
 
 
                     <div class="form-group">
