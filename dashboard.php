@@ -21,6 +21,8 @@ $row3 = mysqli_num_rows($query_run3);
 $query4 = "SELECT id_m FROM maintenance ORDER BY id_m";
 $query_run4 = mysqli_query($conn, $query4);
 $row4 = mysqli_num_rows($query_run4);
+
+$total = $row + $row2 + $row3 + $row4;
 ?>
    <!DOCTYPE html>
 
@@ -52,7 +54,7 @@ $row4 = mysqli_num_rows($query_run4);
             <li><a href="finance_view.php">Finance</a></li>
             <li><a href="RH_view.php">Ressources Humaine</a></li>
             <li><a href="main_view.php">Maintenance</a></li>
-            <li><a href="#">Projets</a></li>
+            <li><a href="proj_view.php">Projets</a></li>
             <li><a href="logout.php">Déconnecter</a></li>
          </ul>
       </nav>
@@ -116,11 +118,11 @@ $row4 = mysqli_num_rows($query_run4);
   <div class="card-header"><h2>Projets</h2></div>
   
   <div class="card-body">
-  <i class="fas fa-project-diagram"></i> Total:12
+  <i class="fas fa-project-diagram"></i> Total: <?php  echo '<h2>'.$total.'</h2>'?>
     <hr>
     <div class="panel-footer">
-      <h6><a style="text-decoration:none;color:white" href="">
-                        <span class="pull-left">View Details</span>
+      <h6><a style="text-decoration:none;color:white" href="proj_view.php">
+                        <span class="pull-left">voire Détails</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div></h6></a>

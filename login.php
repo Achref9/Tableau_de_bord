@@ -30,7 +30,7 @@ include("db.php");
 <body>
     <div class="container mt-5">
         <div class="card">
-            <h5 class="card-header text-center">Connecter</h5>
+            <h5 class="card-header text-center">Connecter au DashBoard</h5>
             <div class="card-body">
                 <form method="POST" action="authentificate.php" >
 
