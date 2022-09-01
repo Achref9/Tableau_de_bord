@@ -70,6 +70,16 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Groupe de travail</label>
+                        <div class="form-group">
+                            <input type="text" name="grp" placeholder="Groupe de travail" class="form-control" required />
+
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
                         <label>Taux d'évaluation</label>
                         <div class="form-group">
                             <input type="text" name="taux" placeholder="Taux d'évaluation" class="form-control" required />
@@ -77,7 +87,21 @@
                             
                         </div>
                     </div>
+                    
+                    <div class="form-group">
+                        <label>Status</label>
+                        <div class="form-group">
+                        <select class="custom-select" name="stat">
+                                    <option value="Actif">Actif</option>
+                                    <option value="Terminé">Terminé</option>
+                                    <option value="Suspendu">Suspendu</option>
+                                    </select>
+                            
+                        </div>
+                    </div>
 
+
+                   <br>
 
                    
 

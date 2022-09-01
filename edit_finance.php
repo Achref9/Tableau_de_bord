@@ -79,7 +79,15 @@ $row=mysqli_fetch_array($res);
 
                             
                         </div>
-                    </div>
+                    </div> 
+
+                    <div class="form-group">
+                        <label>Groupe de travail</label>
+                        <div class="form-group">
+                            <input type="text" name="grp" placeholder="Groupe de travail" class="form-control" value="<?php echo $row['groupe_trav'];?>" required />
+
+                            
+                        </div>
 
                     <div class="form-group">
                         <label>Taux d'évaluation</label>
@@ -90,7 +98,17 @@ $row=mysqli_fetch_array($res);
                         </div>
                     </div>
 
-
+                    <div class="form-group">
+                        <label>Status</label>
+                        <div class="form-group">
+                        <select class="custom-select" name="stat">
+                                    <option value="Actif">Actif</option>
+                                    <option value="Terminé">Terminé</option>
+                                    <option value="Suspendu">Suspendu</option>
+                                    </select>
+                            
+                        </div>
+                    </div>
                    
 
                     <div class="form-group">
@@ -116,13 +134,15 @@ if(isset($_POST['confirmer'])){
     $cout = $conn->quote($_POST['cout']);
     $budget = $conn->quote($_POST['budget']);
     $date= $conn->quote($_POST['date']);
+    $grp = $conn->quote($_POST['grp']);
     $taux = $conn->quote($_POST['taux']);
+    $stat = $conn->quote($_POST['stat']);
 
-    $sql="update finance set projet=$projet, finalite_projet=$finalite, cout=$cout, budget=$budget, created_at=$date, Taux_eval=$taux where id_fin=$id";
+    $sql="update finance set projet=$projet, finalite_projet=$finalite, cout=$cout, budget=$budget, created_at=$date, groupe_trav=$grp ,Taux_eval=$taux, status=$stat where id_fin=$id";
 $result=$conn->exec($sql);
 
 if($result){
-    header("location:finance_view.php");
+    echo"<script>window.location.href='finance_view.php'</script>";
 }
     else{
         echo"<script>alert('error')</script>";

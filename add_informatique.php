@@ -70,9 +70,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Group de travail</label>
+                        <label>Groupe de travail</label>
                         <div class="form-group">
-                            <input type="text" name="grp" placeholder="Group de travail" class="form-control" required />
+                            <input type="text" name="grp" placeholder="Groupe de travail" class="form-control" required />
 
                             
                         </div>
