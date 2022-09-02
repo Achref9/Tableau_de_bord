@@ -65,7 +65,7 @@ $res=mysqli_query($idcon, $requet);
 
 	<table id="userList" class="table table-bordered table-striped ">
 		<thead>
-            <tr><td colspan="9" style="background:#e03444"><span style="color:white">données des projets des Ressources Humaines</tr>
+            <tr><td colspan="11" style="background:#e03444"><span style="color:white">données des projets des Ressources Humaines</tr>
 			<tr>
 				<th>ID</th>
 				<th>Projet</th>
@@ -74,6 +74,8 @@ $res=mysqli_query($idcon, $requet);
 				<th>Ressources budgetair</th>
 				<th>Date de démarrage</th>
 				<th>Taux d'evaluation</th>
+				<th>Groupe de travail</th>
+				<th>État</th>
 				<th >Supprimer</th>					
 				<th >Modifier</th>					
 								
@@ -96,6 +98,8 @@ while ($ligne=mysqli_fetch_array($res))
 <td><?php echo $ligne[4]; ?></td>
 <td><?php echo $ligne[5]; ?></td>
 <td><?php echo $ligne[6]; ?></td>
+<td><?php echo $ligne[7]; ?></td>
+<td><?php echo $ligne[8]; ?></td>
 
 
 <form method="POST" action="">

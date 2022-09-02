@@ -7,7 +7,7 @@ $connect = mysqli_connect("localhost", "root","", "tableaudebord");
 header('Content-Type: text/csv; charset=utf-8');
 header('Content-Disposition: attachment; filename=maintenance.csv');
 $output = fopen("php://output", "w");
-fputcsv($output, array ('ID', 'Projet', 'finalité du projet', 'cout estimatif', 'Ressources budgetair', 'Date de démarrage',"taux d'evaluation" ));
+fputcsv($output, array ('ID', 'Projet', 'Finalité du projet', 'Cout estimatif', 'Ressources budgetair', 'Date de démarrage',"Taux d'evaluation","Group de travail", 'État' ));
 $query = "SELECT * from maintenance ORDER BY id_m ASC";
 $result = mysqli_query($connect, $query);
 
