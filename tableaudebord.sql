@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 29, 2022 at 08:04 AM
+-- Generation Time: Sep 02, 2022 at 10:47 AM
 -- Server version: 8.0.21
 -- PHP Version: 7.3.21
 
@@ -36,6 +36,8 @@ CREATE TABLE IF NOT EXISTS `finance` (
   `budget` varchar(100) NOT NULL,
   `created_at` date NOT NULL,
   `Taux_eval` varchar(100) NOT NULL,
+  `groupe_trav` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL,
   PRIMARY KEY (`id_fin`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -53,7 +55,9 @@ CREATE TABLE IF NOT EXISTS `informatique` (
   `cout` varchar(100) NOT NULL,
   `budget` varchar(100) NOT NULL,
   `created_at` date NOT NULL,
-  `Taux_eval` varchar(100) NOT NULL,
+  `Taux_eval` varchar(50) NOT NULL,
+  `groupe_trav` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL,
   PRIMARY KEY (`id_info`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -94,6 +98,8 @@ CREATE TABLE IF NOT EXISTS `maintenance` (
   `budget` varchar(100) NOT NULL,
   `created_at` date NOT NULL,
   `Taux_eval` varchar(100) NOT NULL,
+  `groupe_trav` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL,
   PRIMARY KEY (`id_m`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -112,6 +118,8 @@ CREATE TABLE IF NOT EXISTS `rh` (
   `budget` varchar(100) NOT NULL,
   `created_at` date NOT NULL,
   `Taux_eval` varchar(100) NOT NULL,
+  `groupe_trav` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL,
   PRIMARY KEY (`id_rh`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;

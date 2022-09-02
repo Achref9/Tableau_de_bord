@@ -32,7 +32,9 @@ $res4=mysqli_query($idcon, $requet4);
 				<th>Cout estimatif</th>
 				<th>Ressources budgetair</th>
 				<th>Date de démarrage</th>
-				<th>Taux d'evaluation</th>
+				<th>Taux d'evaluation(%)</th>
+				<th>Groupe de travail</th>
+				<th>État</th>
 							
 								
 									
@@ -55,6 +57,8 @@ while ($ligne2=mysqli_fetch_array($res2))
 <td><?php echo $ligne2[4]; ?></td>
 <td><?php echo $ligne2[5]; ?></td>
 <td><?php echo $ligne2[6]; ?></td>
+<td><?php echo $ligne2[7]; ?></td>
+<td><?php echo $ligne2[8]; ?></td>
 
 
 
@@ -80,7 +84,9 @@ while ($ligne2=mysqli_fetch_array($res2))
 				<th>Cout estimatif</th>
 				<th>Ressources budgetair</th>
 				<th>Date de démarrage</th>
-				<th>Taux d'evaluation</th>
+				<th>Taux d'evaluation(%)</th>
+				<th>Groupe de travail</th>
+				<th>État</th>
 								
 								
 									
@@ -102,6 +108,8 @@ while ($ligne3=mysqli_fetch_array($res3))
 <td><?php echo $ligne3[4]; ?></td>
 <td><?php echo $ligne3[5]; ?></td>
 <td><?php echo $ligne3[6]; ?></td>
+<td><?php echo $ligne3[7]; ?></td>
+<td><?php echo $ligne3[8]; ?></td>
 
 </tr>
 
@@ -129,7 +137,9 @@ while ($ligne3=mysqli_fetch_array($res3))
 				<th>Cout estimatif</th>
 				<th>Ressources budgetair</th>
 				<th>Date de démarrage</th>
-				<th>Taux d'evaluation</th>
+				<th>Taux d'evaluation(%)</th>
+				<th>Groupe de travail</th>
+				<th>État</th>
 							
 								
 									
@@ -151,6 +161,8 @@ while ($ligne=mysqli_fetch_array($res))
 <td><?php echo $ligne[4]; ?></td>
 <td><?php echo $ligne[5]; ?></td>
 <td><?php echo $ligne[6]; ?></td>
+<td><?php echo $ligne[7]; ?></td>
+<td><?php echo $ligne[8]; ?></td>
 
 
 
@@ -177,7 +189,9 @@ while ($ligne=mysqli_fetch_array($res))
 				<th>Cout estimatif</th>
 				<th>Ressources budgetair</th>
 				<th>Date de démarrage</th>
-				<th>Taux d'evaluation</th>
+				<th>Taux d'evaluation(%)</th>
+				<th>Groupe de travail</th>
+				<th>État</th>
 								
 								
 									
@@ -199,6 +213,8 @@ while ($ligne4=mysqli_fetch_array($res4))
 <td><?php echo $ligne4[4]; ?></td>
 <td><?php echo $ligne4[5]; ?></td>
 <td><?php echo $ligne4[6]; ?></td>
+<td><?php echo $ligne4[7]; ?></td>
+<td><?php echo $ligne4[8]; ?></td>
 
 </tr>
 

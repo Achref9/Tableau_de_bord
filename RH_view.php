@@ -73,7 +73,7 @@ $res=mysqli_query($idcon, $requet);
 				<th>Cout estimatif</th>
 				<th>Ressources budgetair</th>
 				<th>Date de démarrage</th>
-				<th>Taux d'evaluation</th>
+				<th>Taux d'evaluation(%)</th>
 				<th>Groupe de travail</th>
 				<th>État</th>
 				<th >Supprimer</th>					
