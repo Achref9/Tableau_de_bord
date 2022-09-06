@@ -30,7 +30,7 @@ if ($result!=1) {
 }
 
 else {
-	header("location:finance_view.php");
+	echo"<script type='text/javascript'>alert('Projet ajouté avec succée');window.location='finance_view.php'</script>";
 }
 
 //$dec = mysqli_close($conn);

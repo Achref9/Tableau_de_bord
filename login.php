@@ -15,7 +15,7 @@ include("db.php");
 
     <style>
         body {
-            background: #e5e4e2;
+            background-image: url(530a746087d021696f38e010ff8c3112.jpg);
             margin-top:150px;
         }
 

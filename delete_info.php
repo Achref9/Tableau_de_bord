@@ -10,7 +10,7 @@ $del="DELETE FROM informatique WHERE id_info='$id'";
 $result=mysqli_query($idcon,$del);
 
 if($result){
-header("location:informatique_view.php");    
+    echo "<script type='text/javascript'>alert('Projet supprimé avec succée');window.location='informatique_view.php'</script>";
 }else{
 echo "<script>alert('erreur de suppression');</script>"; 
 

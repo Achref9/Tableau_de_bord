@@ -17,13 +17,14 @@ if($_SERVER["REQUEST_METHOD"]="POST")
     header ("location:dashboard.php");
 }
 
-}
+
 else
 {
 
-   echo "username or password incorrect";
+    echo '<script type="text/javascript">alert("Nom utilisateur ou mot de pass incorrect!")</script>';
+    echo "<script>window.location='login.php'</script>";
 }
-
+}
 
 ?>
 

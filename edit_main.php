@@ -144,6 +144,7 @@ if(isset($_POST['confirmer'])){
 $result=$conn->exec($sql);
 
 if($result){
+    echo "<script type='text/javascript'>alert('Projet modifié avec succée')</script>";
     echo"<script>window.location.href='main_view.php'</script>";}
     else{
         echo"<script>alert('error')</script>";

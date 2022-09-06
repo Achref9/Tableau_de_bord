@@ -10,7 +10,7 @@ $del="DELETE FROM rh WHERE id_rh='$id'";
 $result=mysqli_query($idcon,$del);
 
 if($result){
-header("location:RH_view.php");    
+    echo "<script type='text/javascript'>alert('Projet supprimé avec succée');window.location='RH_view.php'</script>";
 }else{
 echo "<script>alert('erreur de suppression');</script>"; 
 

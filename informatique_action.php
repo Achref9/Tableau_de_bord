@@ -30,7 +30,8 @@ if ($result!=1) {
 }
 
 else {
-	header("location:informatique_view.php");
+	echo"<script type='text/javascript'>alert('Projet ajouté avec succée');window.location='informatique_view.php'</script>";
+	
 }
 
 //$dec = mysqli_close($conn);
